@@ -1031,46 +1031,184 @@ footer {
    Responsive Design
    ========================================= */
 @media (max-width: 992px) {
-
-    .skills-grid,
-    .contact-content {
+    .skills-grid {
         grid-template-columns: 1fr;
     }
 
+    .hero-content-grid {
+        padding-left: 2rem;
+        gap: 30px;
+    }
+
+    .hero-left .title {
+        font-size: clamp(3.5rem, 6vw, 5rem);
+    }
+    
     .contact-content {
         padding: 30px;
     }
 }
 
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        /* Should implement mobile menu in JS ideally */
+    .section {
+        padding: 60px 0;
     }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .title {
-        font-size: 2.5rem;
-    }
-
-    .role {
-        font-size: 1.5rem;
-    }
-
-    .hero-cta {
+    
+    .section-header {
+        text-align: center;
+        display: flex;
         flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-hello {
+        top: 20px;
+        left: 20px;
+        font-size: 1.2rem;
+    }
+    
+    .status-pill {
+        top: 20px;
+        right: 20px;
+        padding: 6px 12px;
+    }
+    
+    .status-text {
+        font-size: 0.7rem;
+    }
+
+    .hero-content-grid {
+        grid-template-columns: 1fr;
+        padding: 0 2rem; /* Ensure equal padding on both sides */
+        text-align: center;
+        margin-top: 80px;
+    }
+
+    .hero-left .title {
+        font-size: 3.5rem;
+        margin-top: 10px;
+        line-height: 0.9;
+    }
+    
+    .hero-left .role {
+        font-size: 0.9rem;
+    }
+
+    .hero-left .description {
+        font-size: 0.95rem;
+    }
+
+    .hero-right {
+        margin-top: 40px;
+        perspective: none;
+    }
+
+    .hero-image-box {
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    .pill-nav {
+        bottom: 20px;
+        padding: 12px 20px;
+        width: 90%;
+        max-width: 400px;
+        display: flex;
+        justify-content: center;
+        border-radius: 30px;
+    }
+
+    .pill-nav .nav-links {
+        display: flex;
+        gap: 15px;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .pill-nav .nav-link {
+        font-size: 0.85rem;
+        padding: 5px;
+    }
+
+    .projects-deck {
+        min-height: auto;
+        flex-direction: column;
+        gap: 40px;
+        perspective: none;
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .project-card {
+        position: relative !important;
+        width: 100%;
+        max-width: 350px;
+        transform: none !important;
+        z-index: 1 !important;
+        filter: none !important;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5) !important;
+    }
+    
+    .project-card:hover {
+        transform: translateY(-5px) !important;
+    }
+
+    .card-left, .card-center, .card-right {
+        filter: brightness(1) blur(0px);
+    }
+    
+    .project-img {
+        height: 200px;
+    }
+    
+    .project-info {
+        text-align: center;
+    }
+
+    .project-tech {
+        justify-content: center;
+    }
+
+    .contact-content h3 {
+        font-size: 2.5rem;
     }
 
     .cursor-dot,
     .cursor-outline {
-        display: none;
-        /* Disable custom cursor on mobile */
+        display: none !important;
     }
 
     * {
-        cursor: auto;
+        cursor: auto !important;
+    }
+    
+    footer {
+        padding-bottom: 100px; /* Space for bottom pill nav */
+        text-align: center;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-left .title {
+        font-size: 2.8rem;
+    }
+    
+    .pill-nav .nav-link {
+        font-size: 0.75rem;
+    }
+    
+    .skill-box {
+        padding: 25px;
+    }
+    
+    .skill-icons-grid {
+        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
