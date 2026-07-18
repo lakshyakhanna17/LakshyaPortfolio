@@ -1106,6 +1106,7 @@ footer {
     .hero-image-box {
         max-width: 250px;
         margin: 0 auto;
+        transform: none !important;
     }
 
     .pill-nav {
@@ -1116,6 +1117,8 @@ footer {
         display: flex;
         justify-content: center;
         border-radius: 30px;
+        transform: none !important;
+        transition: none !important;
     }
 
     .pill-nav .nav-links {
@@ -1151,7 +1154,10 @@ footer {
     }
     
     .project-card:hover {
-        transform: translateY(-5px) !important;
+        transform: none !important;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5) !important;
+        border-color: rgba(255, 255, 255, 0.03) !important;
+        filter: none !important;
     }
 
     .card-left, .card-center, .card-right {
@@ -1191,6 +1197,79 @@ footer {
     .footer-content {
         flex-direction: column;
         gap: 15px;
+    }
+
+    /* Remove hover animations on touch devices */
+    .skill-box:hover {
+        border-top-color: rgba(255, 255, 255, 0.2) !important;
+        border-left-color: rgba(255, 255, 255, 0.2) !important;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+    }
+    .skill-item:hover {
+        color: var(--text-muted) !important;
+        transform: none !important;
+    }
+    .hero-image-box:hover {
+        transform: none !important;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5) !important;
+    }
+    .primary-btn:hover {
+        transform: none !important;
+        box-shadow: none !important;
+    }
+    .primary-btn:hover::before {
+        opacity: 0 !important;
+    }
+    .secondary-btn:hover {
+        transform: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+    }
+    .contact-btn:hover {
+        transform: none !important;
+        box-shadow: 4px 4px 0px #000 !important;
+        background: var(--accent-primary) !important;
+        color: #000 !important;
+    }
+    .social-icon:hover {
+        transform: none !important;
+    }
+    .github-icon:hover, .linkedin-icon:hover {
+        background: rgba(255, 255, 255, 0.02) !important;
+        border-color: rgba(255, 255, 255, 0.08) !important;
+        color: #fff !important;
+        box-shadow: none !important;
+    }
+    .scroll-top:hover {
+        background: var(--bg-surface) !important;
+        transform: none !important;
+    }
+    .pill-nav .nav-link:hover {
+        color: var(--text-muted) !important;
+    }
+    .pill-nav .nav-link.active:hover {
+        color: var(--accent-primary) !important;
+    }
+    .pill-nav .nav-link:hover::after {
+        width: 0 !important;
+    }
+    .pill-nav .nav-link.active:hover::after {
+        width: calc(100% - 20px) !important;
+    }
+
+    /* Force all layout elements to be completely static (no scroll animations, no pulsating) */
+    .fade-up, .fade-in, .fade-left {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .hero-bg, .status-dot {
+        animation: none !important;
+    }
+
+    .scroll-indicator {
+        display: none !important;
     }
 }
 
